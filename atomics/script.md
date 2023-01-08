@@ -1,6 +1,6 @@
 # Atomics
 
-The **Atomics** object provides operations for Bufffer objects such as:
+The **Atomics** object provides unitlity operations for different Bufffer objects such as:
 
 - SharedArrayBuffer
 - ArrayBuffer
