@@ -1,9 +1,5 @@
 import "./styles.css";
 
-const API = window.SpeechRecognition || window.webkitSpeechRecognition;
-
-const recognition = new API();
-
 document.getElementById("app").innerHTML = `
 <h1>SpeechRecognition API</h1>
 <p>
@@ -13,6 +9,11 @@ document.getElementById("app").innerHTML = `
 
 </p>
 `;
+
+const API = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+const recognition = new API();
+
 
 document.querySelector("button").onclick = () => {
   recognition.start();

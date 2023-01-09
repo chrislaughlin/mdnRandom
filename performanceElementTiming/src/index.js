@@ -1,8 +1,18 @@
 import "./styles.css";
 
 document.getElementById("app").innerHTML = `
-<img src="https://www.thedyslexicdeveloper.com/static/965102566b5e96617672a01ee925febb/b315d/profile-pic.jpg" elementtiming="big-image" />
-<p elementtiming="text" id="text-id">text here</p>
+<img 
+  src="https://cdn-images-1.medium.com/max/725/0*R2CETMgg1344gf0V.jpg" 
+  elementtiming="big-image" 
+  width="300" 
+/>
+
+<p 
+  elementtiming="text" 
+  id="text-id"
+>
+    text here
+</p>
 `;
 
 const observer = new PerformanceObserver((list) => {
@@ -10,4 +20,5 @@ const observer = new PerformanceObserver((list) => {
     console.log(entry);
   });
 });
+
 observer.observe({ entryTypes: ["element"] });
