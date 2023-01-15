@@ -5,19 +5,22 @@ const person = {
     }
 }
 
-console.log(`Original person city: ${person.location.city}`)
+console.log(`person city: ${person.location.city}`)
 
 const spreadClone = {...person};
 const structuredClonePerson = structuredClone(person);
 
 console.log('-- Change the spreadClone city --');
 spreadClone.location.city = 'London';
-console.log(`spreadClone person city: ${spreadClone.location.city}`)
-console.log(`Original person city: ${person.location.city}`)
+console.log(`spreadClone: ${spreadClone.location.city}`)
+console.log(`person: ${person.location.city}`)
+
 console.log('');
 console.log('');
 
-console.log('-- Change the structuredClonePerson city --');
+console.log('-- Change structuredClonePerson --');
 structuredClonePerson.location.city = 'New York';
-console.log(`spreadClone person city: ${structuredClonePerson.location.city}`)
-console.log(`Original person city: ${person.location.city}`)
+console.log(
+    `spreadClone: ${structuredClonePerson.location.city}`
+);
+console.log(`person: ${person.location.city}`)
